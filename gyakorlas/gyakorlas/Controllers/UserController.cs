@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using gyakorlas.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MySql.Data.MySqlClient;
 using System.Data;
@@ -36,8 +37,35 @@ namespace gyakorlas.Controllers
             catch (Exception e)
             {
                 return BadRequest(e.Message);
-                throw;
+            }
+        }
+        [HttpPost]
+        public ActionResult<User> Post(CreatedUserDto createUser)
+        {
+            DateTime dt = DateTime.Now;
+            string time = dt.ToString("yyyy-MM-dd HH:mm:ss");
+            var user = new User {
+                Id = Guid.NewGuid(),
+                Name = createUser.Name,
+                Email = createUser.Email,
+                Age = createUser.Age,
+                Created = time
+            };
+            try
+            {
+                connect.connection.Open();
+                string sql = "INSERT INTO `users`(`Id`, `Name`, `Email`, `Age`, `Created`) " +
+                    $"VALUES ('{user.Id}','{user.Name}','{user.Email}',{user.Age},'{user.Created}')";
+                MySqlCommand command = new MySqlCommand(sql,connect.connection);
+                command.ExecuteNonQuery();
+                connect.connection.Close();
+                return StatusCode(201, user);
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
             }
         }
     }
+    
 }
