@@ -6,6 +6,6 @@
         public string Name { get; set; }
         public string Email { get; set; }
         public int Age { get; set; }
-        public DateTimeOffset Created { get; set; }
+        public string Created { get; set; }
     }
 }

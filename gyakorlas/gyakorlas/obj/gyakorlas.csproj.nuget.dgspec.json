@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Git\\Backend\\gyakorlas\\gyakorlas\\gyakorlas.csproj": {}
+    "C:\\Users\\Balázs\\Documents\\Git\\Backend\\gyakorlas\\gyakorlas\\gyakorlas.csproj": {}
   },
   "projects": {
-    "E:\\Git\\Backend\\gyakorlas\\gyakorlas\\gyakorlas.csproj": {
+    "C:\\Users\\Balázs\\Documents\\Git\\Backend\\gyakorlas\\gyakorlas\\gyakorlas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Git\\Backend\\gyakorlas\\gyakorlas\\gyakorlas.csproj",
+        "projectUniqueName": "C:\\Users\\Balázs\\Documents\\Git\\Backend\\gyakorlas\\gyakorlas\\gyakorlas.csproj",
         "projectName": "gyakorlas",
-        "projectPath": "E:\\Git\\Backend\\gyakorlas\\gyakorlas\\gyakorlas.csproj",
+        "projectPath": "C:\\Users\\Balázs\\Documents\\Git\\Backend\\gyakorlas\\gyakorlas\\gyakorlas.csproj",
         "packagesPath": "C:\\Users\\Balázs\\.nuget\\packages\\",
-        "outputPath": "E:\\Git\\Backend\\gyakorlas\\gyakorlas\\obj\\",
+        "outputPath": "C:\\Users\\Balázs\\Documents\\Git\\Backend\\gyakorlas\\gyakorlas\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\Balázs\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -40,6 +45,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
@@ -64,7 +73,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
