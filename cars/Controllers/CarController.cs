@@ -50,18 +50,29 @@ namespace cars.Controllers
         {
             using (var context = new CarContext())
             {
-                var old = context.Cars.First(x => x.Id == id);
+                var old = context.Cars.Find(id);
                 var request = new Car()
                 {
                     Id = id,
                     Modelname = updateCar.Modelname,
                     Description = updateCar.Description,
-                    Created = old.Created
+                    Created = old!.Created
                 };
                 
                 context.Cars.Update(request);
                 context.SaveChanges();
                 return Ok(request);
+            }
+        }
+        [HttpDelete]
+        public ActionResult Delete(Guid id)
+        {
+            using (var context = new CarContext())
+            {
+                var old = context.Cars.Find(id);
+                context.Cars.Remove(old!);
+                context.SaveChanges();
+                return Ok(old);
             }
         }
     }
