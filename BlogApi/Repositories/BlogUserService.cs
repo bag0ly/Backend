@@ -22,12 +22,12 @@ namespace BlogApi.Repositories
 
         public async Task<IEnumerable<BlogUser>> Get()
         {
-           return dbContext.BlogUsers.ToList();
+            return await dbContext.BlogUsers.ToListAsync();
         }
 
         public async Task<BlogUser> GetById(Guid Id)
         {
-            return dbContext.BlogUsers.SingleOrDefault(x => x.Id.Equals(Id));
+            return await dbContext.BlogUsers.SingleOrDefaultAsync(x => x.Id.Equals(Id));
         }
 
         public async Task<BlogUser> Post(CreateBlogUserDto createBlogUserDto)

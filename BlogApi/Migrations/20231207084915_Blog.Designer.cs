@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BlogApi.Migrations
 {
     [DbContext(typeof(BlogDbContext))]
-    [Migration("20231130080925_AlterBlogDbType")]
-    partial class AlterBlogDbType
+    [Migration("20231207084915_Blog")]
+    partial class Blog
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -46,6 +46,47 @@ namespace BlogApi.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("BlogUsers");
+                });
+
+            modelBuilder.Entity("BlogApi.Models.BlogUserContent", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("char(36)");
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("varchar(30)");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("char(36)");
+
+                    b.Property<Guid>("blogUserId")
+                        .HasColumnType("char(36)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("blogUserId");
+
+                    b.ToTable("BlogUserContent");
+                });
+
+            modelBuilder.Entity("BlogApi.Models.BlogUserContent", b =>
+                {
+                    b.HasOne("BlogApi.Models.BlogUser", "blogUser")
+                        .WithMany()
+                        .HasForeignKey("blogUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("blogUser");
                 });
 #pragma warning restore 612, 618
         }

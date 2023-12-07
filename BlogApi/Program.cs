@@ -12,6 +12,7 @@ namespace BlogApi
 
             builder.Services.AddDbContext<BlogDbContext>();
             builder.Services.AddScoped<IBlogUserInterface, BlogUserService>();
+            builder.Services.AddScoped< IBlogUserContentInterface, BlogUserContentService >();
 
             // Add services to the container.
 
