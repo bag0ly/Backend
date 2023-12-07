@@ -20,18 +20,56 @@ namespace BlogApi.Controllers
 
         [HttpPost]
 
-        public async Task<ActionResult<BlogUserContent>> Post(CreateBlogUserContentDto createBlogUserContent) 
+        public async Task<ActionResult<BlogUserContent>> Post(CreateBlogUserContentDto createBlogUserContent)
         {
             return StatusCode(201, await blogUserContent.Post(createBlogUserContent));
         }
 
         [HttpGet]
-        public async Task<ActionResult<BlogUserContent>> Get() 
+        public async Task<ActionResult<BlogUserContent>> Get()
         {
             return StatusCode(201, await blogUserContent.Get());
         }
+        [HttpGet("{Id}")]
+        public async Task<ActionResult<BlogUserContentDto>> GetById(Guid Id)
+        {
+            var result = await blogUserContent.GetById(Id);
 
-        
+            if (result == null)
+            {
+
+                return NotFound();
+            }
+
+
+            return Ok(result);
+        }
+
+        [HttpDelete]
+        public async Task<ActionResult> Delete(Guid Id)
+        {
+            await blogUserContent.Delete(Id);
+            return Ok();
+        }
+        [HttpPut("{Id}")]
+        public async Task<ActionResult<BlogUserContentDto>> UpdateBlogUserContent(Guid Id, [FromBody] UpdateBlogUserContentDto updateBlogUserContent)
+        {
+            var result = await blogUserContent.Put(Id, updateBlogUserContent);
+
+            if (result == null)
+            {
+                // If the resource with the given Id was not found, return a 404 Not Found response
+                return NotFound();
+            }
+
+            // If the resource was updated successfully, return a 201 Created response with the updated resource
+            return StatusCode(201, result);
+        }
+
+
+
+
+
 
     }
 }

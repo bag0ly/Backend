@@ -10,5 +10,10 @@ namespace BlogApi
             return new(blogUser.Id, blogUser.Username, blogUser.UserEmail,
                 blogUser.UserPassword, blogUser.CreatedTime);
         }
+        public static BlogUserContentDto AsDto(this BlogUserContent blogUserContent)
+        {
+            return new(blogUserContent.Id, blogUserContent.Title, blogUserContent.Content,
+                blogUserContent.blogUserId, blogUserContent.Created);
+        }
     }
 }

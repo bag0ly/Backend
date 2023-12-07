@@ -15,7 +15,7 @@ namespace BlogApi.Models
         [Column(TypeName ="longtext")]
         public string? Content { get; set; }
         [Required]
-        public Guid UserId { get; set; }
+        public Guid blogUserId { get; set; }
         public BlogUser? blogUser { get; set; }
         public DateTime Created  { get; set; }
 

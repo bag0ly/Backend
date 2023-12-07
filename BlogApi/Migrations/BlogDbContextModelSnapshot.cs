@@ -62,9 +62,6 @@ namespace BlogApi.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(30)");
 
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("char(36)");
-
                     b.Property<Guid>("blogUserId")
                         .HasColumnType("char(36)");
 

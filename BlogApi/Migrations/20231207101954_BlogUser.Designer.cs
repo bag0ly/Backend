@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BlogApi.Migrations
 {
     [DbContext(typeof(BlogDbContext))]
-    [Migration("20231207084915_Blog")]
-    partial class Blog
+    [Migration("20231207101954_BlogUser")]
+    partial class BlogUser
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -64,9 +64,6 @@ namespace BlogApi.Migrations
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("varchar(30)");
-
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("char(36)");
 
                     b.Property<Guid>("blogUserId")
                         .HasColumnType("char(36)");

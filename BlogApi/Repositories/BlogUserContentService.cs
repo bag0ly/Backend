@@ -7,10 +7,15 @@ namespace BlogApi.Repositories
     public class BlogUserContentService:IBlogUserContentInterface
     {
         private readonly BlogDbContext dbContext;
-
-        public Task Delete(Guid Id)
+        public BlogUserContentService(BlogDbContext dbContext)
         {
-            throw new NotImplementedException();
+            this.dbContext = dbContext;
+        }
+
+        public async Task Delete(Guid Id)
+        {
+            await dbContext.BlogUserContent.Where(x => x.Id == Id).ExecuteDeleteAsync();
+            await dbContext.SaveChangesAsync();
         }
 
         public async Task<IEnumerable<BlogUserContent>> Get()
@@ -18,29 +23,45 @@ namespace BlogApi.Repositories
             return await dbContext.BlogUserContent.ToListAsync();
         }
 
-        public Task<BlogUserContent> GetById(Guid Id)
+        public async Task<BlogUserContentDto> GetById(Guid Id)
         {
-            throw new NotImplementedException();
+           
+            var blogUserContent = await dbContext.BlogUserContent.FirstOrDefaultAsync(x => x.Id.Equals(Id));
+
+            if (blogUserContent == null)
+            {
+                return null; 
+            }
+
+            return blogUserContent.AsDto();
         }
 
-        public async Task<BlogUserContent> Post(CreateBlogUserContentDto createBlogUserContent)
+
+        public async Task<BlogUserContentDto> Post(CreateBlogUserContentDto createBlogUserContent)
         {
             var content = new BlogUserContent
             {
                 Id = Guid.NewGuid(),
                 Title = createBlogUserContent.Title,
                 Content = createBlogUserContent.Content,
+                blogUserId = createBlogUserContent.blogUserId,
                 Created = DateTime.Now,
             };
             await dbContext.BlogUserContent.AddAsync(content);
             await dbContext.SaveChangesAsync();
 
-            return content;
+            return content.AsDto();
         }
 
-        public Task<BlogUserContent> Put(Guid Id, UpdateBlogUserContentDto updateBlogUserContent)
+        public async Task<BlogUserContentDto> Put(Guid Id, UpdateBlogUserContentDto updateBlogUserContent)
         {
-            throw new NotImplementedException();
+            var findid = dbContext.BlogUserContent.FirstOrDefault(x => x.Id.Equals(Id));
+            findid.Title=updateBlogUserContent.Title;
+            findid.Content=updateBlogUserContent.Content;
+
+            await dbContext.SaveChangesAsync();
+
+            return findid.AsDto();
         }
     }
 }
