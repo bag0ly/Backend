@@ -58,11 +58,10 @@ namespace BlogApi.Controllers
 
             if (result == null)
             {
-                // If the resource with the given Id was not found, return a 404 Not Found response
+                
                 return NotFound();
             }
 
-            // If the resource was updated successfully, return a 201 Created response with the updated resource
             return StatusCode(201, result);
         }
 
