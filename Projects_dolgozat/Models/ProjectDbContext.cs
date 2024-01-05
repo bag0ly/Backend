@@ -16,7 +16,7 @@ namespace Projects_dolgozat.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                string conn = "server=10.169.90.139; database=Projects; user=root; password=geci1234!";
+                string conn = "server=192.168.1.253; database=Projects; user=root; password=geci1234!";
 
                 optionsBuilder.UseMySql(conn, ServerVersion.AutoDetect(conn));
             }
