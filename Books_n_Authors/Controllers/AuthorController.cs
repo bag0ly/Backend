@@ -27,6 +27,18 @@ namespace Books_n_Authors.Controllers
         {
             return StatusCode(201, await authorInterface.Get());
         }
+        [HttpGet("nationality/{nationalityId}")]
+        public async Task<ActionResult<IEnumerable<Author>>> GetAuthorsByNationality(Guid nationalityId)
+        {
+            var authors = await authorInterface.GetAuthorsByNationality(nationalityId);
+
+            if (authors == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(authors);
+        }
         [HttpPut("{Id}")]
         public async Task<ActionResult<Author>> UpdateBlogUserContent(Guid Id, UpdateAuthorDto updateAuthorDto)
         {

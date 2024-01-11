@@ -7,7 +7,7 @@ namespace Books_n_Authors.Repositories
     {
         Task<IEnumerable<Author>> Get();
         Task<Author> GetById(Guid Id);
-        Task<Author> GetByNationality(Guid Nationality);
+        Task<IEnumerable<Author>> GetAuthorsByNationality(Guid Nationality);
         Task<Author> Post(CreateAuthorDto createAuthorDto);
         Task<Author> Put(Guid Id, UpdateAuthorDto updateAuthorDto);
         Task Delete(Guid Id);

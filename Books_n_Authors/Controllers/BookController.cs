@@ -40,6 +40,18 @@ namespace Books_n_Authors.Controllers
 
             return StatusCode(201, result);
         }
+        [HttpGet("author/{authorId}")]
+        public async Task<ActionResult<IEnumerable<Book>>> GetBooksByAuthor(Guid authorId)
+        {
+            var books = await bookInterface.GetBooksByAuthor(authorId);
+
+            if (books == null || !books.Any())
+            {
+                return NotFound();
+            }
+
+            return Ok(books);
+        }
         [HttpGet("{Id}")]
         public async Task<ActionResult<BookDto>> GetById(Guid Id)
         {

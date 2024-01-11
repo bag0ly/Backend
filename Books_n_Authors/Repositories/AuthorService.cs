@@ -31,9 +31,11 @@ namespace Books_n_Authors.Repositories
             return await dbcontext.Authors.SingleOrDefaultAsync(x => x.Id.Equals(Id));
         }
 
-        public async Task<Author> GetByNationality(Guid Nationality) 
+        public async Task<IEnumerable<Author>> GetAuthorsByNationality(Guid nationalityId)
         {
-
+            return await dbcontext.Authors
+                                  .Where(author => author.Nationality == nationalityId)
+                                  .ToListAsync();
         }
 
         public async Task<Author> Post(CreateAuthorDto createAuthorDto)

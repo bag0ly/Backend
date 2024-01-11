@@ -35,6 +35,15 @@ namespace Books_n_Authors.Repositories
                 return await dbcontext.Books.SingleOrDefaultAsync(x => x.Id.Equals(Id));
             }
         }
+        public async Task<IEnumerable<Book>> GetBooksByAuthor(Guid authorId)
+        {
+            using (var dbcontext = new BooksNAuthorsContext())
+            {
+                return await dbcontext.Books
+                      .Where(book => book.Author == authorId)
+                      .ToListAsync();
+            }
+        }
 
         public async Task<Book> Post(CreateBookDto createBookDto)
         {
