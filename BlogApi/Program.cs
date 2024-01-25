@@ -13,6 +13,7 @@ namespace BlogApi
             builder.Services.AddDbContext<BlogDbContext>();
             builder.Services.AddScoped<IBlogUserInterface, BlogUserService>();
             builder.Services.AddScoped< IBlogUserContentInterface, BlogUserContentService >();
+            builder.Services.AddScoped<IEmailInterface, EmailService>();
 
             // Add services to the container.
 

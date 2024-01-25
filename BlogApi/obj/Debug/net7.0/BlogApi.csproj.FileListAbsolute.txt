@@ -41,3 +41,9 @@ C:\Users\Balázs\Documents\Git\Backend\BlogApi\obj\Debug\net7.0\refint\BlogApi.d
 C:\Users\Balázs\Documents\Git\Backend\BlogApi\obj\Debug\net7.0\BlogApi.pdb
 C:\Users\Balázs\Documents\Git\Backend\BlogApi\obj\Debug\net7.0\BlogApi.genruntimeconfig.cache
 C:\Users\Balázs\Documents\Git\Backend\BlogApi\obj\Debug\net7.0\ref\BlogApi.dll
+C:\Users\Balázs\Documents\Git\Backend\BlogApi\obj\Debug\net7.0\BlogApi.sourcelink.json
+C:\Users\Balázs\Documents\Git\Backend\BlogApi\bin\Debug\net7.0\BouncyCastle.Cryptography.dll
+C:\Users\Balázs\Documents\Git\Backend\BlogApi\bin\Debug\net7.0\MailKit.dll
+C:\Users\Balázs\Documents\Git\Backend\BlogApi\bin\Debug\net7.0\MimeKit.dll
+C:\Users\Balázs\Documents\Git\Backend\BlogApi\bin\Debug\net7.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\Balázs\Documents\Git\Backend\BlogApi\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Security.Cryptography.Pkcs.dll

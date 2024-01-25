@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "vcmSbI0LuKLE0sZH9+xf76zLY/TV7V5P5/v/r2oxTjo=",
+  "Source": "email_service",
+  "BasePath": "_content/email_service",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
