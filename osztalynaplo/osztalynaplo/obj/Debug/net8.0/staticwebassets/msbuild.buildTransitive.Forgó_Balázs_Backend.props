@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Forgó_Balázs_Backend.props" />
+</Project>

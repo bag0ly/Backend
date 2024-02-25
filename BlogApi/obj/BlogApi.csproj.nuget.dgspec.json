@@ -45,10 +45,13 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+<<<<<<< Updated upstream
             "MailKit": {
               "target": "Package",
               "version": "[4.3.0, )"
             },
+=======
+>>>>>>> Stashed changes
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.11, )"
@@ -91,7 +94,11 @@
               "privateAssets": "all"
             }
           },
+<<<<<<< Updated upstream
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+=======
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+>>>>>>> Stashed changes
         }
       }
     }

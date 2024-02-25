@@ -2,6 +2,7 @@
   "version": 3,
   "targets": {
     "net7.0": {
+<<<<<<< Updated upstream
       "BouncyCastle.Cryptography/2.2.1": {
         "type": "package",
         "compile": {
@@ -15,6 +16,8 @@
           }
         }
       },
+=======
+>>>>>>> Stashed changes
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -28,6 +31,7 @@
           }
         }
       },
+<<<<<<< Updated upstream
       "MailKit/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -44,6 +48,8 @@
           }
         }
       },
+=======
+>>>>>>> Stashed changes
       "Microsoft.AspNetCore.OpenApi/7.0.11": {
         "type": "package",
         "dependencies": {
@@ -373,6 +379,7 @@
           }
         }
       },
+<<<<<<< Updated upstream
       "MimeKit/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -392,6 +399,8 @@
           }
         }
       },
+=======
+>>>>>>> Stashed changes
       "Mono.TextTemplating/2.2.1": {
         "type": "package",
         "dependencies": {
@@ -508,6 +517,7 @@
           "lib/netstandard2.0/System.CodeDom.dll": {}
         }
       },
+<<<<<<< Updated upstream
       "System.Formats.Asn1/7.0.0": {
         "type": "package",
         "compile": {
@@ -587,6 +597,8 @@
           }
         }
       },
+=======
+>>>>>>> Stashed changes
       "System.Text.Encodings.Web/7.0.0": {
         "type": "package",
         "compile": {
@@ -631,6 +643,7 @@
     }
   },
   "libraries": {
+<<<<<<< Updated upstream
     "BouncyCastle.Cryptography/2.2.1": {
       "sha512": "A6Zr52zVqJKt18ZBsTnX0qhG0kwIQftVAjLmszmkiR/trSp8H+xj1gUOzk7XHwaKgyREMSV1v9XaKrBUeIOdvQ==",
       "type": "package",
@@ -651,6 +664,8 @@
         "packageIcon.png"
       ]
     },
+=======
+>>>>>>> Stashed changes
     "Humanizer.Core/2.14.1": {
       "sha512": "lQKvtaTDOXnoVJ20ibTuSIOf2i0uO0MPbDhd1jm238I+U/2ZnRENj0cktKZhtchBMtCUSRQ5v4xBCUbKNmyVMw==",
       "type": "package",
@@ -669,6 +684,7 @@
         "logo.png"
       ]
     },
+<<<<<<< Updated upstream
     "MailKit/4.3.0": {
       "sha512": "jVmB3Nr0JpqhyMiXOGWMin+QvRKpucGpSFBCav9dG6jEJPdBV+yp1RHVpKzxZPfT+0adaBuZlMFdbIciZo1EWA==",
       "type": "package",
@@ -709,6 +725,8 @@
         "mailkit.nuspec"
       ]
     },
+=======
+>>>>>>> Stashed changes
     "Microsoft.AspNetCore.OpenApi/7.0.11": {
       "sha512": "+3PUTx950QiUzw9CriQfCpfv11cJ0uMzQrDS3BwkEDlRduAh/2+1mxDy2S8wS1j3zyQpjbtQU0fFeWTU8j0Ljg==",
       "type": "package",
@@ -1388,6 +1406,7 @@
         "microsoft.openapi.nuspec"
       ]
     },
+<<<<<<< Updated upstream
     "MimeKit/4.3.0": {
       "sha512": "39KDXuERDy5VmHIn7NnCWvIVp/Ar4qnxZWg9m06DfRqDbW1B6zFv9o3Tdoa4CCu71tE/0SRqRCN5Z+bbffw6uw==",
       "type": "package",
@@ -1426,6 +1445,8 @@
         "mimekit.nuspec"
       ]
     },
+=======
+>>>>>>> Stashed changes
     "Mono.TextTemplating/2.2.1": {
       "sha512": "KZYeKBET/2Z0gY1WlTAK7+RHTl7GSbtvTLDXEZZojUdAPqpQNDL6tHv7VUpqfX5VEOh+uRGKaZXkuD253nEOBQ==",
       "type": "package",
@@ -1594,6 +1615,7 @@
         "version.txt"
       ]
     },
+<<<<<<< Updated upstream
     "System.Formats.Asn1/7.0.0": {
       "sha512": "+nfpV0afLmvJW8+pLlHxRjz3oZJw4fkyU9MMEaMhCsHi/SN9bGF9q79ROubDiwTiCHezmK0uCWkPP7tGFP/4yg==",
       "type": "package",
@@ -1716,6 +1738,8 @@
         "useSharedDesignerContext.txt"
       ]
     },
+=======
+>>>>>>> Stashed changes
     "System.Text.Encodings.Web/7.0.0": {
       "sha512": "OP6umVGxc0Z0MvZQBVigj4/U31Pw72ITihDWP9WiWDm+q5aoe0GaJivsfYGq53o6dxH7DcXWiCTl7+0o2CGdmg==",
       "type": "package",
@@ -1821,7 +1845,10 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+<<<<<<< Updated upstream
       "MailKit >= 4.3.0",
+=======
+>>>>>>> Stashed changes
       "Microsoft.AspNetCore.OpenApi >= 7.0.11",
       "Microsoft.EntityFrameworkCore >= 7.0.14",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.14",
@@ -1874,10 +1901,13 @@
       "net7.0": {
         "targetAlias": "net7.0",
         "dependencies": {
+<<<<<<< Updated upstream
           "MailKit": {
             "target": "Package",
             "version": "[4.3.0, )"
           },
+=======
+>>>>>>> Stashed changes
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
             "version": "[7.0.11, )"
@@ -1920,7 +1950,11 @@
             "privateAssets": "all"
           }
         },
+<<<<<<< Updated upstream
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+>>>>>>> Stashed changes
       }
     }
   }
