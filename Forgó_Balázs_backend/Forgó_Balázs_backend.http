@@ -1,0 +1,6 @@
+@Forgó_Balázs_backend_HostAddress = http://localhost:5183
+
+GET {{Forgó_Balázs_backend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

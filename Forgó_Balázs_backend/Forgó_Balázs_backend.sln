@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Forgó_Balázs_backend", "Forgó_Balázs_backend.csproj", "{0346E2DD-3D77-4623-B5AC-7EA02D9C6F55}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0346E2DD-3D77-4623-B5AC-7EA02D9C6F55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0346E2DD-3D77-4623-B5AC-7EA02D9C6F55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0346E2DD-3D77-4623-B5AC-7EA02D9C6F55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0346E2DD-3D77-4623-B5AC-7EA02D9C6F55}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {907469A7-B1C6-4CB6-A7BF-690CDDB0B70C}
+	EndGlobalSection
+EndGlobal

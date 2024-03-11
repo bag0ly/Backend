@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Forgó_Balázs_backend.props" />
+</Project>
