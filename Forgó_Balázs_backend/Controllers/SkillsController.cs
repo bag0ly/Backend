@@ -23,7 +23,14 @@ namespace Forgó_Balázs_backend.Controllers
         [HttpGet("GetVersenyzok")]
         public async Task<ActionResult<Versenyzo>> GetVersenyzok()
         {
-            return StatusCode(201, await _context.Versenyzos.ToListAsync());
+            var result = await _context.Versenyzos
+                                                            .ToListAsync();
+            if (result==null)
+            {
+                return StatusCode(400, "Unable to connect any mysql server");
+            }
+
+            return StatusCode(201, result) ;
         }
         //9.feladat
         [HttpGet("GetVersenyzo/{Id}")]
@@ -31,7 +38,7 @@ namespace Forgó_Balázs_backend.Controllers
         {
             var result = await _context.Versenyzos.FirstOrDefaultAsync(x => x.Id == Id);
 
-            if (result == null) { return NotFound(); }
+            if (result == null) { return StatusCode(400); }
 
             return Ok(result);
         }
@@ -54,13 +61,13 @@ namespace Forgó_Balázs_backend.Controllers
             if (UserId == "FKB3F4FEA09CE43C")
             {
 
-                var orszagid = _context.Orszags.FirstOrDefaultAsync(x => x.Id == createVersenyzoDto.OrszagId);
+                var orszagid = await _context.Orszags.FirstOrDefaultAsync(x => x.Id == createVersenyzoDto.OrszagId);
 
-                var szakmaid = _context.Szakmas.FirstOrDefaultAsync(x => x.Id == createVersenyzoDto.SzakmaId);
+                var szakmaid = await _context.Szakmas.FirstOrDefaultAsync(x => x.Id == createVersenyzoDto.SzakmaId);
 
                 if (szakmaid == null && orszagid == null)   
                 {
-                    return NotFound();  
+                    return StatusCode(400, "Unable to connect any mysql server");
                 }
 
                 var versenyzo = new Versenyzo
@@ -71,16 +78,13 @@ namespace Forgó_Balázs_backend.Controllers
                     Pont = 0
                 };
 
+                await _context.Versenyzos.AddAsync(versenyzo);
+                await _context.SaveChangesAsync();
+
                 return Ok(versenyzo); 
             }
 
-            return Unauthorized();
-
-
-           
-
+            return StatusCode(404, "Helytelen azonositó");
         }
-
-
     }
 }

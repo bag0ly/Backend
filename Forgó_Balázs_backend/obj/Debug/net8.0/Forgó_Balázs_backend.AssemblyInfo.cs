@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Forgó_Balázs_backend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3a80841959649e686b9ae97ea0c39139135cf2a7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+68bd21f0bd5d0a58cccc65d92dfb03312d8ee933")]
 [assembly: System.Reflection.AssemblyProductAttribute("Forgó_Balázs_backend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Forgó_Balázs_backend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

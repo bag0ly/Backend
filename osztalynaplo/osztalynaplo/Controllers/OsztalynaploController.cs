@@ -117,6 +117,9 @@ namespace Forgó_Balázs_Backend.Controllers
                     throw new Exception("„Nincs jogosultsága új versenyző felvételéhez!”");
                 }
 
+                await _context.Jegyeks.AddAsync(jegyek);
+                await _context.SaveChangesAsync();
+
                 return StatusCode(201,  "A jegy hozzaadasa sikeresen megtortent");
             }
             catch (Exception e)
