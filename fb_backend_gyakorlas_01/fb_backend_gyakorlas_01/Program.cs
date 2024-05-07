@@ -1,4 +1,8 @@
-
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Microsoft.EntityFrameworkCore;
 using fb_backend_gyakorlas_01.Models;
 using System.Text.Json.Serialization;
 
@@ -21,6 +25,19 @@ namespace fb_backend_gyakorlas_01
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy(MyAllowSpecificOrigins,
+                                  policy =>
+                                  {
+                                      policy.WithOrigins("*")
+                                            .AllowAnyHeader()
+                                            .AllowAnyMethod();
+                                  });
+            });
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -34,6 +51,8 @@ namespace fb_backend_gyakorlas_01
 
             app.UseAuthorization();
 
+            // Apply CORS middleware before MapControllers()
+            app.UseCors(MyAllowSpecificOrigins);
 
             app.MapControllers();
 
