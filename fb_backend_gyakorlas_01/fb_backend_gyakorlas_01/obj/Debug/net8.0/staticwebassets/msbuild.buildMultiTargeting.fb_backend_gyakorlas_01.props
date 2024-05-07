@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\fb_backend_gyakorlas_01.props" />
+</Project>

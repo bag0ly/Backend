@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Balázs\\Documents\\Git\\Backend\\email_service\\email_service.csproj": {}
+    "E:\\Git\\Backend\\email_service\\email_service.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Balázs\\Documents\\Git\\Backend\\email_service\\email_service.csproj": {
+    "E:\\Git\\Backend\\email_service\\email_service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Balázs\\Documents\\Git\\Backend\\email_service\\email_service.csproj",
+        "projectUniqueName": "E:\\Git\\Backend\\email_service\\email_service.csproj",
         "projectName": "email_service",
-        "projectPath": "C:\\Users\\Balázs\\Documents\\Git\\Backend\\email_service\\email_service.csproj",
+        "projectPath": "E:\\Git\\Backend\\email_service\\email_service.csproj",
         "packagesPath": "C:\\Users\\Balázs\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Balázs\\Documents\\Git\\Backend\\email_service\\obj\\",
+        "outputPath": "E:\\Git\\Backend\\email_service\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\Balázs\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -93,7 +88,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

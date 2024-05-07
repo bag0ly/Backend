@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kM1y2QMV8Xk3GCfK3D2h6uGcg932HPDK84fRoM6a7XqX4kX45+6Iu4Ub5UvcaR0Rn6IEL915hC01htR3FgR89A==",
+  "dgSpecHash": "ncs4Q+sz0O9RlxX1YOC9zDVFN1DU6J8KLNkOM84XO9PEsDK6MfogO0O9tCPuPVXFKtwIn6eBxXz3cFPAXr6XGw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Balázs\\Documents\\Git\\Backend\\email_service\\email_service.csproj",
+  "projectFilePath": "E:\\Git\\Backend\\email_service\\email_service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Balázs\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",
     "C:\\Users\\Balázs\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
