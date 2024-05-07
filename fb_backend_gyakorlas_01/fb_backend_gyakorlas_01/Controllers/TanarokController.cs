@@ -30,11 +30,11 @@ namespace fb_backend_gyakorlas_01.Controllers
         }
 
         [HttpPost("PostTanar")]
-        public async Task<ActionResult<Tanarok>> PostTanarok(TanarPost tanar) 
+        public async Task<ActionResult<Tanarok>> PostTanarok(TanarPost tanar)
         {
             var tanarExist = await _context.Tanaroks.AnyAsync(x => x.Email == tanar.Email);
 
-            if (tanarExist) 
+            if (tanarExist)
             {
                 return Conflict();
             }
@@ -54,19 +54,27 @@ namespace fb_backend_gyakorlas_01.Controllers
         }
 
         [HttpPut("PutTanar")]
-        public async Task<ActionResult<Tanarok>> PutTanarok(int Id,TanarPost tanar) 
+        public async Task<ActionResult<Tanarok>> PutTanarok(int Id, TanarPost tanar)
         {
             var tanarExist = await _context.Tanaroks.FirstOrDefaultAsync(x => x.Id == Id);
-            if (tanarExist==null) return BadRequest();
-            
+            if (tanarExist == null) return BadRequest();
+
             tanarExist.VezetekNev = tanar.VezetekNev;
-            tanarExist.KeresztNev= tanar.KeresztNev;
+            tanarExist.KeresztNev = tanar.KeresztNev;
             tanarExist.Email = tanar.Email;
             tanarExist.Nem = tanar.Nem;
-            
+
             await _context.SaveChangesAsync();
-            
-            return Ok();    
+
+            return Ok();
+        }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Tanarok>> GetTanarokById(int id) 
+        {
+            var result = await _context.Tanaroks.Include(x=>x.Jegyeks).FirstOrDefaultAsync(x => x.Id == id);
+            if (result == null) return BadRequest();
+            return Ok(result);
         }
     }
 }
