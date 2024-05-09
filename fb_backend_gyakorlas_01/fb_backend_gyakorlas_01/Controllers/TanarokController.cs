@@ -76,5 +76,19 @@ namespace fb_backend_gyakorlas_01.Controllers
             if (result == null) return BadRequest();
             return Ok(result);
         }
+
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<Tanarok>> DeleteTanarokById(int id) 
+        {
+            var result = await _context.Tanaroks.FirstOrDefaultAsync(y => y.Id == id);
+            var jegyek = await _context.Jegyeks.Where(j=>j.IdTanarok==id).ToListAsync();
+            if (result == null) return BadRequest();
+            _context.Jegyeks.RemoveRange(jegyek);
+            await _context.SaveChangesAsync();
+
+            _context.Tanaroks.Remove(result);
+            await _context.SaveChangesAsync();
+            return Ok();
+        }
     }
 }

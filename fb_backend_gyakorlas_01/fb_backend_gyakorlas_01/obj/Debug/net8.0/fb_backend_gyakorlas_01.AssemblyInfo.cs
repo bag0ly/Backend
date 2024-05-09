@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("fb_backend_gyakorlas_01")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b5778e9f0976437242cf8b67580a1750255c9d4d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d5160b001485e7dce2a31e041dda95b884cd0f6b")]
 [assembly: System.Reflection.AssemblyProductAttribute("fb_backend_gyakorlas_01")]
 [assembly: System.Reflection.AssemblyTitleAttribute("fb_backend_gyakorlas_01")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
